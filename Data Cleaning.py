@@ -383,10 +383,6 @@ fan = sw_df[sw_df["Do you consider yourself to be a fan of the Star Wars film fr
 no_fan= sw_df[sw_df["Do you consider yourself to be a fan of the Star Wars film franchise?"] == 'No']
 sw_df["Education"].value_counts()
 
-
-# In[40]:
-
-
 fans_education = pd.DataFrame({'fans':fan[fan.columns[36]].value_counts(),
                               'not_fans':no_fan[no_fan.columns[36]].value_counts()})
 
@@ -396,26 +392,7 @@ s3 = fans_education.plot(kind = 'bar' ,ax=s3)
 s3.set_xticklabels(['Bachelor Degree','Graduate Degree','High school Degree','Less than high school','Some College',
                 ])
 
-
-# In[41]:
-
-
 # Task 2: Data Exploration
-# 3. Explore whether there are relationship between people's demographics (Gender, Age, Household Income, Education, Location) and their attitude to Start War characters. 
-
-#Code goes after this line by adding cells
-
-
-# # 2.3 Exploring Specific Relationship
-
-# In[42]:
-
-
-# we will explore some questions based on gender, age, household income and location
-
-
-# In[43]:
-
 
 sw_df2={
     'Please state whether you view the following characters favorably, unfavorably, or are unfamiliar with him/her.': 'view towards Han Solo',
